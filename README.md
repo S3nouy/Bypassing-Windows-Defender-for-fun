@@ -82,3 +82,10 @@ Finally you can send a command to reboot the machine ‘’shutdown –r –t 0�
 
 TIP: Don’t forget to start your listener again.
 
+# Conclusion :
+
+This attack has succeeded in both Windows 10 version 2004 and the latet Windows 10 2023 at the time doing this experiment.
+
+I hope you all enjoyed this walkthrough and had fun discovering what can casual tools we use and some scripting knowledge can do.
+
+
