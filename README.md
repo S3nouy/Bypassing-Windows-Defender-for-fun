@@ -23,6 +23,7 @@ What the script does :
 We then use bat-to-exe-converter to convert/build our batch file to an exetuable file.
 
 #things to change:
+
 -import an icon to be set as the final exe’s icon
 -change exe format to 64-bit | Windows (invisible) ///This makes the exe run without triggereing the cmd.exe prompt to show.
 Note: You can check the Request admin privileges box to make the final exe request admin privs to run.
