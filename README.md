@@ -16,4 +16,7 @@ What the script does :
 
 `call windowMode -pid %errorlevel% -mode hidden` now we pass the pid number of the cmd prompt we are currently on to the windowmode.exe and hiding any potential errors.
 
--the rest of the script downloads netcat (a remote control tool) and outputs it to a set folder, in this case C:\Users\Public\Downloads and then runs it with the parameter –e to connect to our listening machine 10.0.5.29 through the port 9999.
+`the rest of the script` downloads netcat (a remote control tool) and outputs it to a set folder, in this case C:\Users\Public\Downloads and then runs it with the parameter –e to connect to our listening machine 10.0.5.29 through the port 9999.
+
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1188ce4d-34c9-4d61-91d8-227485c9936f)
+
