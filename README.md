@@ -21,6 +21,7 @@ What the script does :
 ![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1188ce4d-34c9-4d61-91d8-227485c9936f)
 
 We then use bat-to-exe-converter to convert/build our batch file to an exetuable file.
+
 #things to change:
 -import an icon to be set as the final exe’s icon
 -change exe format to 64-bit | Windows (invisible) ///This makes the exe run without triggereing the cmd.exe prompt to show.
