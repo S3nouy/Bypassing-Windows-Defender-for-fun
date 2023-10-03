@@ -1,5 +1,5 @@
 # Bypassing-Windows-Defender-for-fun
-![816nvu](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1b9865a9-73c4-4e63-b1bf-bc5d62f79fa1)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/26c6e32c-51d0-45a0-b9e2-d0c523e9be7d)
 
 
 # Disclaimer:
@@ -28,7 +28,8 @@ What the script does :
 
 `the rest of the script` downloads netcat (a remote control tool) and outputs it to a set folder, in this case C:\Users\Public\Downloads and then runs it with the parameter –e to connect to our listening machine 10.0.5.29 through the port 9999.
 
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1188ce4d-34c9-4d61-91d8-227485c9936f)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1ede01d4-2180-4295-92b0-473789660405)
+
 
 We then use bat-to-exe-converter to convert/build our batch file to an exetuable file.
 
@@ -42,24 +43,30 @@ Note: You can check the Request admin privileges box to make the final exe reque
 
 The result : `OneDrive.exe`
 
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/b7ad88d4-6deb-4172-ba11-3c0bdd222b42)
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/0b346d79-4c03-43c2-89e7-9b26a173581a)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/5f785b6a-785e-4365-834e-7f4722d14429)
+
+
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/59ad8cc1-e804-423f-afec-6e6c09d5debe)
+
 
 I’ve crafted a fake email using some sentences that official Microsoft teams use in their texts and used a fake Microsoft account to make it look more authentic. You can find the email here https://pastebin.com/XFrn4Z4w
 
 Now, onto a Windows machine, the first test subject is Windows 10 version 2004. This version of Windows 10 was released back on May 27, 2020, so it's not that old.
 
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/ada32d5b-c710-49ea-8af3-7aa7ee082902)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1171f4ff-bb0a-4cc3-a476-31dd97e7d534)
+
 
 We now start our listner on the 9999 port and proceed to run the OneDrive.xe on the Windows machine.
 
 `$nc –lnvp 9999`
 
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1a8c2498-7425-4b33-98c6-13d4da3b55cc)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/67ee4068-61d4-4511-a6af-4752f7d954ca)
+
 
 After the victim has ran our malicious file, we get a reverse shell. Meaning we can control his computer and all sorts of thing including removing/creating folders and files acccessing every path we want. But there are some limitations. As you can see we are logged in as the user so that means we only have the user privileges and we need to gain Administrator rights in order to have all the rights and permissions available on the system.
 
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/c7ed7d38-e6f4-47af-bc33-32df0b67dd2d)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/af552987-7c9d-404e-854c-125b8b269d13)
+
 
 # Privilege Escalation and Persistence :
 
@@ -81,7 +88,8 @@ On the victim machine change directory to `C:\Users\Public\Downloads\` . Then do
 
 `$copy "C:\Users\Public\Downloads\startup.exe" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"`
 
-![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/1d65e504-d7f3-4b5c-b86a-c80e91b90035)
+![image](https://github.com/S3nouy/Bypassing-Windows-Defender-for-fun/assets/77050462/8e482e24-8b37-4377-9b3c-693d6ed33a3b)
+
 
 Finally you can send a command to reboot the machine ‘’shutdown –r –t 0’’ or wait for the victim user to reboot it and you’ll get a shell again but this time you’ll have admin rights.
 
