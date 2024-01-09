@@ -97,7 +97,7 @@ TIP: Don’t forget to start your listener again.
 
 # Conclusion :
 
-This attack has succeeded in both Windows 10 version 2004 and the latet Windows 10 2023 at the time doing this experiment.
+This attack has succeeded in both Windows 10 version 2004 and the latest Windows 10 2023 at the time of doing this experiment.
 
 I hope you all enjoyed this walkthrough and had fun discovering what casual tools we use and some scripting knowledge can do.
 
