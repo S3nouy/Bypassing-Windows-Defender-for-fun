@@ -10,7 +10,7 @@ This presentation is intended solely for educational purposes to increase awaren
 -Senouy
 
 # Introduction:
-In this demo I am taking advantage of simple things, casual softwares intended for ethical use cases and I shape them to be dangerous assets to hack our way in a Windows machine protected by MS Defender.
+In this demo I am taking advantage of simple things, casual software intended for ethical use cases and I shape them to be dangerous assets to hack our way in a Windows machine protected by MS Defender.
 
 Let’s take a look at the script we are using.
 
